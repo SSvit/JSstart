@@ -103,6 +103,12 @@ console.log(typeof getNan); <!-- поверне тип даних number -->
 const bigInteger = 12345678901234567890123456789n; <!-- Числовому літералу додаємо букву n -->
 console.log(typeoof bigInteger);
 
+<!-- Symbol -->
+<!-- Унікальний індифікатор обєкта з допомогою одноіменної функції (id) -->
+
+let id = Symbol("id");
+console.log(typeoof id); <!-- отримаємо symbol -->
+
 <!-- String -->
 <!-- Щоб перпемінна повернула цей тип даних потрібно значення помістити в лапки -->
 <!-- кавички бувають: двойні("), одинарні('), косі/обернені (`) -->
@@ -124,7 +130,7 @@ let userName = `Фрілансер по життю`;
 let userAgeInfo = `Вік: ${userAge}`; <!-- у косих/обернених (`) кавичкиах можна використати шаблон ${} -->
 console.log(typeoof userName);
 
-<!-- Object/Function -->
+<!-- Object -->
 <!-- Більш складний тип даних, можна записати у вигляді блоку з фігурними дужками -->
 
 let userInfo = {
@@ -132,4 +138,70 @@ name: "Фрілансер по життю";
 age: 36;
 }
 console.log(userInfo); <!-- отримаємо {name: "Фрілансер по життю"; age: 36} -->
-console.log(typeoof userInfo); <!-- отримаємо object -->
+console.log(typeof userInfo); <!-- отримаємо object -->
+
+<!-- Function -->
+<!-- По суті - це той же Object, але для більш простого визначення для function -->
+
+let funcVariable = function name(params) {
+
+<!-- код функції -->
+
+}
+console.log(typeof funcVariableo);
+
+<!-- ТИПІВ ДАНИХ можна переобразовувати -->
+<!-- Приклад: РЯДКОВЕ преобразування -->
+
+let userAge = 58;
+console.log(userAge); <!-- отримаємо 58, значення в console синього кольору -->
+console.log(typeof userAge); <!-- отримаємо number -->
+
+userAge = String(userAge);
+
+console.log(userAge); <!-- отримаємо 58, значення в console білого кольору -->
+console.log(typeof userAge); <!-- отримаємо string -->
+
+<!-- бульове в рядкове -->
+
+let userTrue = true;
+console.log(userTrue); <!-- отримаємо true, значення в console синього кольору -->
+console.log(typeof userTrue); <!-- отримаємо boolean -->
+
+userAge = String(userTrue);
+
+console.log(userTrue); <!-- отримаємо true, значення в console білого кольору -->
+console.log(typeof userTrue); <!-- отримаємо string -->
+
+<!-- Приклад: ЧИСЛОВЕ преобразування -->
+
+let userAge = "58";
+console.log(userAge); <!-- отримаємо рядкове 58, значення в console білого кольору -->
+console.log(typeof userAge); <!-- отримаємо string -->
+
+userAge = Number(userAge);
+
+console.log(userAge); <!-- отримаємо числове 58, значення в console синього кольору -->
+console.log(typeof userAge); <!-- отримаємо number -->
+
+<!-- Якщо преобразувати рядок в якому немає числа, в числовий, то отримаємо NaN -->
+
+let userAge = "Фрілансер";
+
+userAge = Number(userAge);
+
+console.log(userAge); <!-- NaN  -->
+console.log(typeof userAge); <!-- отримаємо number -->
+
+<!-- Приклад: БУЛЬОВЕ преобразування -->
+
+let userAge = 58;
+console.log(userAge); <!-- отримаємо 58, значення в console синього кольору -->
+console.log(typeof userAge); <!-- отримаємо number -->
+
+userAge = Boolean(userAge);
+
+console.log(userAge); <!-- отримаємо true, значення в console синього кольору -->
+console.log(typeof userAge); <!-- отримаємо boolean -->
+
+<!-- УВАГА: число 0 або пустий рядок поверне false/ рядок "0" або " "(з пробілом) поверне true-->
