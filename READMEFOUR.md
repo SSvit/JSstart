@@ -63,5 +63,15 @@ if (number > 50) {
     console.log('Умова не виконана :('); 
 }
 
+<!-- Умовний оператор "?" -->
+let message = "Привіт!";
+let messageEnd;
 
+if (5 > 1) {
+    messageEnd = ", Вася!');     
+} else {
+    messageEnd = ", Оля!');
+}
 
+message += messageEnd;
+console.log(message);
