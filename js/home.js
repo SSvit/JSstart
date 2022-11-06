@@ -592,14 +592,23 @@ console.log(numbers); // [2, 4, 6, 8, 10]
 
 
 
-const article = document.querySelector(".article");
-// console.log(article.innerHTML);
+// const article = document.querySelector(".article");
+// // console.log(article.innerHTML);
 
-const title = document.querySelector(".article .title");
-console.log(title.innerHTML);
+// const title = document.querySelector(".article .title");
+// console.log(title.innerHTML);
 
-const text = document.querySelector(".article .text");
-console.log(text.innerHTML);
+// const text = document.querySelector(".article .text");
+// console.log(text.innerHTML);
 
-const link = document.querySelector(".article .link");
-console.log(link.innerHTML);
+// const link = document.querySelector(".article .link");
+// console.log(link.innerHTML);
+
+
+
+const parent = document.querySelector("#parent");
+
+parent.addEventListener("click", (event) => {
+  console.log("event.target: ", event.target);
+  console.log("event.currentTarget: ", event.currentTarget);
+});
